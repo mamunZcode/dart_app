@@ -1,16 +1,12 @@
 import 'dart:io';
 import 'package:archive/archive.dart';
 import 'package:dart_app/screen/setting-screen.dart';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:provider/provider.dart';
-import '../service/firebase_auth_methods.dart';
 import '../service/firestore_service.dart';
 import 'cart_list.dart';
-
 
 class HomeScreen extends StatefulWidget {
   static const id = 'home_screen';
@@ -80,13 +76,13 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Consumer<FirebaseAuthMethods>(builder: (context, auth, child) {
+
       return
       (Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
           title: Text(
-            '101 C Problems' +'\n'+'${auth.user.email}',
+            '101 C Problems',
             style: TextStyle(fontFamily: 'mono',),
           ),
           // Add a menu button to the AppBar
@@ -149,9 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ListTile(
                 title: const Text('Sign Out'),
-                onTap: () {
-                  context.read<FirebaseAuthMethods>().signOut(context);
-                },
+
               ),
             ],
           ),
@@ -170,17 +164,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       )
       );
-    },
-    );
+
   }
   @override
   void initState() {
     super.initState();
-    var currentUser = context
-        .read<FirebaseAuthMethods>()
-        .user; // Add a random string to the list
-    var userId = currentUser.uid;
-    // context.read<MyItemList>().listenToDocuments(userId);
+
+
   }
 }
 class ViewType {

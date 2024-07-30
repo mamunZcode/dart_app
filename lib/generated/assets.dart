@@ -21,8 +21,6 @@ class Assets {
   static const String screenDevloper = 'lib/screen/devloper.dart';
   static const String screenHomeScreen = 'lib/screen/home_screen.dart';
   static const String screenItemView = 'lib/screen/item_view.dart';
-  static const String screenLoginScreen = 'lib/screen/login_screen.dart';
-  static const String screenRegistration = 'lib/screen/registration.dart';
   static const String screenSettingScreen = 'lib/screen/setting-screen.dart';
   static const String serviceFirebaseAuthMethods = 'lib/service/firebase_auth_methods.dart';
   static const String serviceFirestoreService = 'lib/service/firestore_service.dart';

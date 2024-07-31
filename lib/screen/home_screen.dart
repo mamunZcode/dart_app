@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return;
     }
     final directoryPath = await getApplicationDocumentsDirectory();
-    final filePath = '${directoryPath.path}/101CProblemSolution';
+    final filePath = '${directoryPath.path}/50dartProblems';
     final directory = Directory(filePath);
 
     if (directory.existsSync()) {
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return;
     }    //if directory does not exists download and extract zip
     const url =
-        'https://github.com/mamunZcode/100cProblems/archive/refs/heads/main.zip';
+        'https://github.com/mamunZcode/50dartProblems/archive/refs/heads/main.zip';
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final Uint8List bytes = response.bodyBytes;
@@ -59,11 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
       // Rename the directory and delete the temp zip file
       directory.listSync().forEach((element) {
         if (element is Directory) {
-          if (element.path.contains("mostasim-101CProblemSolution-")) {
+          if (element.path.contains("mamunZcode-50dartProblems-")) {
             element.renameSync('${directory.path}/');
           }
         } else if (element is File) {
-          if (element.path.contains("temp.z101CProblemSolutionip")) {
+          if (element.path.contains("temp.z50dartProblemsip")) {
             element.deleteSync();
             debugPrint("temp.zip deleted");
           }
@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: _scaffoldKey,
         appBar: AppBar(
           title: Text(
-            '101 C Problems',
+            '52 Dart Problems',
             style: TextStyle(fontFamily: 'mono',),
           ),
           // Add a menu button to the AppBar
@@ -121,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       size: 48,
                     ),
                     Text(
-                      '101 C Problems',
+                      '52 Dart Problems',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 24,
@@ -142,10 +142,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.pushNamed(context, 'developer_screen');
                 },
-              ),
-              ListTile(
-                title: const Text('Sign Out'),
-
               ),
             ],
           ),

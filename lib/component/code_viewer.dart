@@ -39,9 +39,10 @@ class _CodeViewerState extends State<CodeViewer>
 
   Future<String> loadCodeFile() async {
     if (kIsWeb) {
+//https://github.com/mamunZcode/50dartProblems/raw/main/1.dart
 
       final uri = Uri.parse(
-          'https://raw.githubusercontent.com/mamunZcode/100cProblems/main/${widget.fileName}.c');
+          'https://raw.githubusercontent.com/mamunZcode/50dartProblems/main/${widget.fileName}.dart');
       String fileContent = '';
       try {
         final response = await http.get(uri);
@@ -62,7 +63,7 @@ class _CodeViewerState extends State<CodeViewer>
     }
     Directory directory = await getApplicationDocumentsDirectory();
     File file =
-        File('${directory.path}/101CProblemSolution/${widget.fileName}.c');
+        File('${directory.path}/50dartProblems/${widget.fileName}.dart');
     return file.readAsStringSync();
   }
 
@@ -138,7 +139,7 @@ class _CodeViewerState extends State<CodeViewer>
                         minWidth: MediaQuery.of(context).size.width),
                     child: HighlightView(
                       code,
-                      language: 'c',
+                      language: 'dart',
                       padding: const EdgeInsets.all(8.0),
                       theme: themeMap[codeViewTheme] ?? defaultTheme,
                       textStyle: const TextStyle(

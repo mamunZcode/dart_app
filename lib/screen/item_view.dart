@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../component/code_viewer.dart';
+import '../model/dart.dart';
 import '../model/problems.dart';
 import '../state/all_problems.dart';
 

@@ -16,6 +16,7 @@ class Assets {
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
+  static const String modelDart = 'lib/model/dart.dart';
   static const String modelProblems = 'lib/model/problems.dart';
   static const String screenCartList = 'lib/screen/cart_list.dart';
   static const String screenDevloper = 'lib/screen/devloper.dart';

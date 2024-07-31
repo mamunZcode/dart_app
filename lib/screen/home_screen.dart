@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import '../service/firestore_service.dart';
+
 import 'cart_list.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,7 +18,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  FirestoreService firestoreService = FirestoreService();
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   ViewType viewType = ViewType.grid;
   Future<void> downloadAndExtractZip() async {

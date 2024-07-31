@@ -14,7 +14,6 @@ class Assets {
   static const String componentCodeViewer = 'lib/component/code_viewer.dart';
   static const String componentMyItem = 'lib/component/my_item.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
-  static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
   static const String modelDart = 'lib/model/dart.dart';
   static const String modelProblems = 'lib/model/problems.dart';
@@ -23,11 +22,7 @@ class Assets {
   static const String screenHomeScreen = 'lib/screen/home_screen.dart';
   static const String screenItemView = 'lib/screen/item_view.dart';
   static const String screenSettingScreen = 'lib/screen/setting-screen.dart';
-  static const String serviceFirebaseAuthMethods = 'lib/service/firebase_auth_methods.dart';
-  static const String serviceFirestoreService = 'lib/service/firestore_service.dart';
-  static const String serviceGoogleSignIn = 'lib/service/googleSignIn.dart';
   static const String stateAllProblems = 'lib/state/all_problems.dart';
   static const String stateCartModel = 'lib/state/cart_model.dart';
-  static const String stateFirestoreItemList = 'lib/state/firestore_item_list.dart';
 
 }

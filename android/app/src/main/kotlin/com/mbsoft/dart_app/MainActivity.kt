@@ -1,4 +1,4 @@
-package com.example.dart_app
+package com.mbsoft.dart_app
 
 import io.flutter.embedding.android.FlutterActivity
 

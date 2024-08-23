@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   ViewType viewType = ViewType.grid;
   Future<void> downloadAndExtractZip() async {
+    return;
     // Don't run this function if you're on the web
     if (kIsWeb) {
       return;
@@ -83,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: _scaffoldKey,
         appBar: AppBar(
           title: Text(
-            '52 Dart Problems',
+            '50 Dart Problems',
             style: TextStyle(fontFamily: 'mono',),
           ),
           // Add a menu button to the AppBar
@@ -122,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       size: 48,
                     ),
                     Text(
-                      '52 Dart Problems',
+                      '50 Dart Problems',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 24,

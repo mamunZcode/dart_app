@@ -38,9 +38,6 @@ class _CodeViewerState extends State<CodeViewer>
   }
 
   Future<String> loadCodeFile() async {
-    if (kIsWeb) {
-//https://github.com/mamunZcode/50dartProblems/raw/main/1.dart
-
       final uri = Uri.parse(
           'https://raw.githubusercontent.com/mamunZcode/50dartProblems/main/${widget.fileName}.dart');
       String fileContent = '';
@@ -61,11 +58,6 @@ class _CodeViewerState extends State<CodeViewer>
       }
       return fileContent;
     }
-    Directory directory = await getApplicationDocumentsDirectory();
-    File file =
-        File('${directory.path}/50dartProblems/${widget.fileName}.dart');
-    return file.readAsStringSync();
-  }
 
   @override
   void initState() {
@@ -114,13 +106,9 @@ class _CodeViewerState extends State<CodeViewer>
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
-                AnimatedIcon(
-                  progress: animation,
-                  icon: AnimatedIcons.add_event,
-                  size: 24,
-                ),
+                //Animation icon set
                 SizedBox(
-                  width: 8,
+                  width: 5,
                 ),
                 Text(
                   'Code:',

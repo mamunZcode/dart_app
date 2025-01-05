@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import '';
 
-class Devloper extends StatefulWidget {
+class Developer extends StatefulWidget {
   static const id = 'developer_screen';
 
+  const Developer({super.key});
+
   @override
-  State<Devloper> createState() => _DevloperState();
+  State<Developer> createState() => _DeveloperState();
 }
 
-class _DevloperState extends State<Devloper> {
+class _DeveloperState extends State<Developer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,15 +41,15 @@ class _DevloperState extends State<Devloper> {
                   image: AssetImage('assets/mamun.jpeg'),
                 ),
               ),
-              Divider(
+             const Divider(
                 height: 10.0,
                 color: Colors.red,
                 thickness: 1.5,
               ),
-              headtitle(
+             const headtitle(
                 text: 'Details',
               ),
-              SizedBox(
+            const  SizedBox(
                 height: 8.0,
               ),
               const Row(
@@ -60,10 +62,10 @@ class _DevloperState extends State<Devloper> {
                   Text('MD:Muntasir Mamun'),
                 ],
               ),
-              SizedBox(
+            const  SizedBox(
                 height: 5.0,
               ),
-              Row(
+            const  Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
@@ -76,10 +78,10 @@ class _DevloperState extends State<Devloper> {
                   Text('01765698686'),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5.0,
               ),
-              Row(
+             const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
@@ -92,26 +94,26 @@ class _DevloperState extends State<Devloper> {
                   Text('mamun10.dj@gmail.com'),
                 ],
               ),
-              Divider(
+            const  Divider(
                 color: Colors.red,
                 thickness: 1.5,
               ),
-              headtitle(text: 'Bio'),
-              SizedBox(
+             const headtitle(text: 'Bio'),
+             const SizedBox(
                 height: 8.0,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Text(
                     'A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragrap'
                     'A paragraph is a series of sentences that are organized and coherent, and are all related to a single to'),
               ),
-              Divider(
+             const Divider(
                 color: Colors.red,
                 thickness: 1.5,
               ),
-              headtitle(text: 'Ratings This app'),
-              SizedBox(
+              const headtitle(text: 'Ratings This app'),
+              const SizedBox(
                 height: 8.0,
               ),
               GestureDetector(
@@ -127,10 +129,10 @@ class _DevloperState extends State<Devloper> {
                       fontStyle: FontStyle.italic),
                 ),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 150.0,
               ),
-              Row(
+              const Row(
                mainAxisAlignment: MainAxisAlignment.start,
 
                 children: [
@@ -169,7 +171,7 @@ class headtitle extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(
+          style:const TextStyle(
               fontSize: 20.0,
               color: Colors.redAccent,
               fontStyle: FontStyle.italic,

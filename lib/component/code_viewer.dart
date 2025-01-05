@@ -102,7 +102,7 @@ class _CodeViewerState extends State<CodeViewer>
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(4.0)),
           ),
-          title: Padding(
+          title: const Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [

@@ -21,6 +21,7 @@ class Assets {
   static const String screenDevloper = 'lib/screen/devloper.dart';
   static const String screenHomeScreen = 'lib/screen/home_screen.dart';
   static const String screenItemView = 'lib/screen/item_view.dart';
+  static const String screenNewDeveloper = 'lib/screen/new_developer.dart';
   static const String screenSettingScreen = 'lib/screen/setting-screen.dart';
   static const String stateAllProblems = 'lib/state/all_problems.dart';
   static const String stateCartModel = 'lib/state/cart_model.dart';

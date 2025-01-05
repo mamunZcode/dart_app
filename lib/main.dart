@@ -1,5 +1,6 @@
 import 'package:dart_app/screen/devloper.dart';
 import 'package:dart_app/screen/home_screen.dart';
+import 'package:dart_app/screen/new_developer.dart';
 import 'package:dart_app/screen/setting-screen.dart';
 import 'package:dart_app/state/all_problems.dart';
 import 'package:dart_app/state/cart_model.dart';
@@ -38,7 +39,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.id: (context) => HomeScreen(),
         SettingScreen.id: (context) => SettingScreen(),
-        Devloper.id:(context) => Devloper(),
+        Developer.id:(context) => Developer(),
+        NewDeveloper.id:(context)=>NewDeveloper(),
       },
     );
   }

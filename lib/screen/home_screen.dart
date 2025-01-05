@@ -140,9 +140,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               ListTile(
-                title: Text('Devloper Info'),
+                title: const Text('Devloper Info'),
                 onTap: () {
-                  Navigator.pushNamed(context, 'developer_screen');
+                  Navigator.pushNamed(context, 'New_Developer_Screen');
                 },
               ),
             ],

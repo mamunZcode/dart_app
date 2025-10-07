@@ -1,11 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:url_launcher/link.dart';
 
-class NewDeveloper extends StatelessWidget {
+class NewDeveloper extends StatefulWidget {
   static const id = 'New_Developer_Screen';
   const NewDeveloper({super.key});
 
+  @override
+  State<NewDeveloper> createState() => _NewDeveloperState();
+}
+
+class _NewDeveloperState extends State<NewDeveloper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +23,7 @@ class NewDeveloper extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-               const Padding(
+                const Padding(
                   padding: EdgeInsets.only(
                     left: 15,
                     top: 15,
@@ -49,27 +53,70 @@ class NewDeveloper extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8.0, right: 8.0),
-                      child: ElevatedButton(onPressed: () {}, child: Text('C-LearningApp',style: TextStyle(color: Colors.black),),style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white54,) ),),
+                      child: Link(
+                        target: LinkTarget.blank,
+                        uri: Uri.parse('https://c-app-eight.vercel.app/'),
+                        builder: (context, followLink) => ElevatedButton(
+                          onPressed: followLink,
+                          child: Text(
+                            'C-LearningApp',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                            Colors.white54,
+                          )),
+                        ),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8.0, right: 8.0),
-                      child: ElevatedButton(onPressed: () {}, child: Text('Dart-LearningApp',
-                          style: TextStyle(color: Colors.black)),style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white54,))),
+                      child: Link(
+                        target: LinkTarget.blank,
+                        uri: Uri.parse('https://play.google.com/store/apps/details?id=com.mbsoft.dart_app&hl=en'),
+                        builder: (context, followLink) => ElevatedButton(
+                            onPressed: followLink,
+                            child: Text('Dart-LearningApp', style: TextStyle(color: Colors.black)),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                              Colors.white54,
+                            ))),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8.0, right: 8.0),
-                      child: ElevatedButton(onPressed: () {}, child: Text('DashBoard',style: TextStyle(color: Colors.black)),style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white54,))),
+                      child: Link(
+                        target: LinkTarget.blank,
+                        uri: Uri.parse('https://firebase-dashboard-six.vercel.app/'),
+                        builder: (context, followLink) => ElevatedButton(
+                            onPressed: followLink,
+                            child: Text('DashBoard', style: TextStyle(color: Colors.black)),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                              Colors.white54,
+                            ))),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8.0, right: 8.0),
-                      child: ElevatedButton(onPressed: () {}, child: Text('Ceaser-Cipher',style: TextStyle(color: Colors.black)),style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white54,))),
+                      child: Link(
+                        target: LinkTarget.blank,
+                        uri: Uri.parse('https://bmi-flutter-app.vercel.app/'),
+                        builder: (context, followLink) => ElevatedButton(
+                            onPressed: followLink,
+                            child: Text('Bmi-Calculator', style: TextStyle(color: Colors.black)),
+                            style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                              Colors.white54,
+                            ))),
+                      ),
                     ),
                   ],
                 )
               ],
             ),
             //Text on left developer info
-          const  Padding(
+            const Padding(
               padding: const EdgeInsets.only(top: 15.0, left: 8.0),
               child: Text(
                 'Developer \ninfo',
@@ -92,18 +139,18 @@ class NewDeveloper extends StatelessWidget {
               ),
             ),
             //App details on left
-           const Padding(
-              padding:  EdgeInsets.only(left: 20.0, top: 10.0),
+            const Padding(
+              padding: EdgeInsets.only(left: 20.0, top: 10.0),
               child: Text(
                 'App Details',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-           const ItemElement(
+            const ItemElement(
               mainText: 'Version',
               leadingIcon: Icon(
                 Icons.ac_unit,
-                color: Colors.white,
+                color: Colors.redAccent,
               ),
               trailingIcon: Icon(Icons.arrow_forward_ios_rounded),
             ),
@@ -111,58 +158,31 @@ class NewDeveloper extends StatelessWidget {
                 mainText: 'Technology',
                 leadingIcon: Icon(
                   Icons.access_time_filled_sharp,
-                  color: Colors.white,
+                  color: Colors.redAccent,
                 ),
                 trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
+            const ItemElement(
                 mainText: 'Roles',
                 leadingIcon: Icon(
                   Icons.ac_unit_rounded,
-                  color: Colors.white,
+                  color: Colors.redAccent,
                 ),
                 trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
+            const ItemElement(
                 mainText: 'Acclomers',
                 leadingIcon: Icon(
                   Icons.access_time,
-                  color: Colors.white,
+                  color: Colors.redAccent,
                 ),
                 trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
+            const ItemElement(
                 mainText: 'Bidata',
                 leadingIcon: Icon(
                   Icons.adb_outlined,
-                  color: Colors.white,
+                  color: Colors.redAccent,
                 ),
                 trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
-                mainText: 'Bidata',
-                leadingIcon: Icon(
-                  Icons.adb_outlined,
-                  color: Colors.white,
-                ),
-                trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-          const ItemElement(
-                mainText: 'Bidata',
-                leadingIcon: Icon(
-                  Icons.adb_outlined,
-                  color: Colors.white,
-                ),
-                trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
-                mainText: 'Bidata',
-                leadingIcon: Icon(
-                  Icons.adb_outlined,
-                  color: Colors.white,
-                ),
-                trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
-           const ItemElement(
-                mainText: 'Bidata',
-                leadingIcon: Icon(
-                  Icons.adb_outlined,
-                  color: Colors.white,
-                ),
-                trailingIcon: Icon(Icons.arrow_forward_ios_rounded)),
+
             //icon and text on card
           ],
         ),
@@ -183,12 +203,12 @@ class ItemElement extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ListTile(
         leading: CircleAvatar(
+          backgroundColor: Colors.black12,
           child: leadingIcon,
-          backgroundColor: Colors.black54,
         ),
         title: Text(
           mainText,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style:const TextStyle(fontWeight: FontWeight.bold),
         ),
         trailing: trailingIcon,
       ),
